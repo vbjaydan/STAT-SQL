@@ -16,7 +16,7 @@ WHERE
 
 -- EXPLANATION
 -- ROW_NUMBER() OVER (ORDER BY value ASC) AS rnum: This assigns a sequential integer to each row ordered by value
--- COUNT(*) OVER () AS total_count: This calculates the total number of rows.
+-- COUNT(*) OVER () AS total_count:  This calculates the total number of rows in the dataset and makes this value available to each row in the result set.
 -- ROUND(AVG(value), 4) AS median_value: Selects the average of the two middle values (for even number of rows) or the single middle value (for odd number of rows), rounded to 4 decimal places.
 -- WHERE row_num IN (FLOOR((total_count + 1) / 2.0), CEIL((total_count + 1) / 2.0)): Filters to get the two middle rows for even count or the single middle row for odd count.
 
